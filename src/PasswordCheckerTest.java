@@ -12,4 +12,10 @@ public class PasswordCheckerTest {
     assertEquals("short", actual);
   }
 
+  @Test
+  public void testDescribePasswordMediumLength(){
+    PasswordChecker checker = new PasswordChecker(6, 12);
+    String actual  = checker.describePasswordLength("helloo");
+    assertEquals("medium", actual);
+  }
 }
